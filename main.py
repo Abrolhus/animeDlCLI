@@ -15,9 +15,9 @@ import util
 
 @click.command()
 @click.argument('name')
-@click.option('-e', '--ep', default=1, help='episode')
-@click.option('--provider', default='twist.moe', help='site to get animes from')
-@click.option('--autoplay', is_flag=True, help='Autoplays next episode')
+@click.option('-e', '--ep', default=1, help='episode no.')
+@click.option('--provider', default='twist.moe', help='site to get episodes from')
+@click.option('--autoplay', is_flag=True, help='autoplays next episode')
 def hello(name, ep, provider, autoplay):
     Anime = get_anime_class(provider)
     player = 'mpv'
